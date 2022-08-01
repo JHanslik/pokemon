@@ -1,0 +1,19 @@
+.card {
+    width: 35%;
+}
+button {
+    width: 35%;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+body {
+    background-color: #1a202c;
+}
+
+.btn {
+    background-color: #81e6d9;
+    font-weight: bold;
+}
