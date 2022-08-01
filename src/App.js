@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [pokemon, setPokemon] = useState(null);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const request = await fetch("https://pokeapi.co/api/v2/pokemon/1");
+        const response = await request.json();
+        setPokemon(response);
+    };
+
+    if (!pokemon) {
+        return <div></div>;
+    }
+    return (
+        <div>
+            <img src={pokemon.sprites.front_default} />
+            <h1>{pokemon.name}</h1>
+            <h2>Height: {pokemon.height}</h2>
+            <h2>Weight: {pokemon.weight}</h2>
+            <div>
+                <h2>Types:</h2>
+                {pokemon.types.map((type, i) => {
+                    return (
+                        <ul key={i}>
+                            <li>{type.type.name}</li>
+                        </ul>
+                    );
+                })}
+            </div>
+        </div>
+    );
 }
 
 export default App;
