@@ -8,7 +8,7 @@ function App() {
     );
 
     useEffect(() => {
-        fetchData();
+        fetchData;
     }, [randomPokemon]);
 
     const fetchData = async () => {
