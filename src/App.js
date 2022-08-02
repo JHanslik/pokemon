@@ -28,21 +28,21 @@ function App() {
     }
     return (
         <div className="container d-flex flex-column justify-content-center align-items-center">
-            <div className="card m-4 p-5 h-75 border border-white bg-transparent text-white">
+            <div className="card m-4 p-3 h-75 text-dark">
                 <img
                     src={pokemon.sprites.other.home.front_default}
                     alt={`${pokemon.name}`}
                     className="card-img-top"
                 />
-                <h1>{pokemon.name}</h1>
-                <h2 className="fs-4">
+                <h1 className="fs-2">{pokemon.name}</h1>
+                <h2 className="fs-5">
                     Height: <span className="fw-light">{pokemon.height}</span>
                 </h2>
-                <h2 className="fs-4">
+                <h2 className="fs-5">
                     Weight: <span className="fw-light">{pokemon.weight}</span>
                 </h2>
                 <div>
-                    <h2 className="fs-4">Types:</h2>
+                    <h2 className="fs-5">Types:</h2>
                     <ul>
                         {pokemon.types.map((type, i) => {
                             return (

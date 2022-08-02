@@ -1,6 +1,12 @@
+@import url("http://fonts.cdnfonts.com/css/pokemon-solid");
+
 .card {
     width: 25%;
     min-width: 300px;
+    background-color: #ffffff84;
+    -webkit-box-shadow: 0px 0px 20px 14px #ffffff84;
+    box-shadow: 0px 0px 20px 14px #ffffff84;
+    border: none;
 }
 button {
     width: 25%;
@@ -12,10 +18,14 @@ h1 {
 }
 
 body {
-    background-color: #1a202c;
+    background: url(https://i.imgur.com/UTEF6XR.png);
+    background-position: top;
+    font-family: "Pokemon Solid", sans-serif;
+    letter-spacing: 4px;
 }
 
 .btn {
-    background-color: #81e6d9;
-    font-weight: bold;
+    background-color: #37589f;
+    color: #f2c105;
+    border: 1px solid #f2c105;
 }
