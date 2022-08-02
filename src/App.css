@@ -1,8 +1,10 @@
 .card {
     width: 25%;
+    min-width: 300px;
 }
 button {
     width: 25%;
+    min-width: 300px;
 }
 
 h1 {
