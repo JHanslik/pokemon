@@ -9,6 +9,7 @@ function App() {
 
     useEffect(() => {
         fetchData();
+        // eslint-disable-next-line
     }, [randomPokemon]);
 
     const fetchData = async () => {
@@ -26,10 +27,11 @@ function App() {
         return <div></div>;
     }
     return (
-        <div className="container d-flex flex-column justify-content-center align-items-center vh-100">
-            <div className="card p-5 h-75 border border-white bg-transparent text-white">
+        <div className="container d-flex flex-column justify-content-center align-items-center">
+            <div className="card m-4 p-5 h-75 border border-white bg-transparent text-white">
                 <img
                     src={pokemon.sprites.other.home.front_default}
+                    alt={`${pokemon.name}`}
                     className="card-img-top"
                 />
                 <h1>{pokemon.name}</h1>
